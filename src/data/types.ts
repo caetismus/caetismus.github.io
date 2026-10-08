@@ -13,17 +13,11 @@ export interface Project {
   technologies: string[];
 }
 
-export interface Skill {
+export interface SkillItem {
   name: string;
-  category: 'Software' | 'Programming' | 'Core';
+  category: string;
   /** Optional proficiency note, e.g. "Working Knowledge" */
   details?: string;
-}
-
-export interface ToolItem {
-  name: string;
-  /** Grouping label for the TechStack section */
-  category: 'Power Systems Analysis' | 'Design & Drafting' | 'Data, Analytics & Programming';
 }
 
 export interface EducationItem {

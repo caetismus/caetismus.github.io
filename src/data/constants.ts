@@ -26,10 +26,10 @@ export const PORTRAIT_IMAGE = 'assets/images/portrait.jpg';
 //  - Upload resume.pdf   → public/assets/documents/
 // =============================================================================
 export const CONTACT_INFO: ContactInfo = {
-  email:          'jamescubito@gmail.com',
-  viberQrImage:   'assets/images/viber_qr.png',
-  linkedinUrl:    'https://linkedin.com/in/jamescubito',
-  linkedinDisplay:'in/jamescubito',
+  email: 'jamescubito@gmail.com',
+  viberQrImage: 'assets/images/viber_qr.png',
+  linkedinUrl: 'https://linkedin.com/in/jamescubito',
+  linkedinDisplay: 'in/jamescubito',
 };
 
 export const RESUME_PATH = 'assets/documents/resume.pdf';
@@ -40,11 +40,11 @@ export const RESUME_PATH = 'assets/documents/resume.pdf';
 // =============================================================================
 export const EDUCATION: EducationItem[] = [
   {
-    school:     'Pamantasan ng Lungsod ng Maynila',
-    degree:     'Bachelor of Science in Electrical Engineering',
-    location:   'Intramuros, Manila',
-    year:       '2020 – 2026',
-    logo:       'assets/images/plm.png',
+    school: 'Pamantasan ng Lungsod ng Maynila',
+    degree: 'Bachelor of Science in Electrical Engineering',
+    location: 'Intramuros, Manila',
+    year: '2020 – 2026',
+    logo: 'assets/images/plm.png',
     highlights: [
       'Scholar: DOST-SEI Merit 2020',
       'Member: PLM DOST Scholars Association',
@@ -52,11 +52,11 @@ export const EDUCATION: EducationItem[] = [
     ],
   },
   {
-    school:     'De La Salle University – Manila',
-    degree:     'Senior High School, STEM',
-    location:   'Malate, Manila',
-    year:       '2018 – 2020',
-    logo:       'assets/images/dlsu.png',
+    school: 'De La Salle University – Manila',
+    degree: 'Senior High School, STEM',
+    location: 'Malate, Manila',
+    year: '2018 – 2020',
+    logo: 'assets/images/dlsu.png',
     highlights: [
       'Member: DLSU SHS Robotics and Engineering Club',
       'Member: DLSU SHS Student Ambassadors',
@@ -71,12 +71,12 @@ export const EDUCATION: EducationItem[] = [
 // =============================================================================
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    role:     'Intern, Plant Performance and Asset Management',
-    company:  'ACEN',
+    role: 'Intern, Plant Performance and Asset Management',
+    company: 'ACEN',
     location: 'Makati',
     duration: 'July – Oct 2025',
-    type:     'Internship',
-    logo:     'assets/images/acen.png',
+    type: 'Internship',
+    logo: 'assets/images/acen.png',
     description: [
       'Assisted the **Plant Performance Team** in consolidating operational data from multiple plant sites.',
       'Streamlined plant downtime data collection and analysis using **advanced MS Excel** automation, reducing manual overhead and entry errors.',
@@ -87,12 +87,12 @@ export const EXPERIENCE: ExperienceItem[] = [
     ],
   },
   {
-    role:     'Engineering Intern',
-    company:  'IRAH Solutions and Service, Inc.',
+    role: 'Engineering Intern',
+    company: 'IRAH Solutions and Service, Inc.',
     location: 'Quezon City',
     duration: 'July – Aug 2024',
-    type:     'Internship',
-    logo:     'assets/images/irah.png',
+    type: 'Internship',
+    logo: 'assets/images/irah.png',
     description: [
       'Assisted in the design and physical installation of **FDAS and auxiliary systems**, ensuring accurate wiring compliant with safety standards.',
       'Resolved site equipment shortages by coordinating with the main office to expedite logistics, effectively preventing project downtime.',
@@ -107,42 +107,43 @@ export const EXPERIENCE: ExperienceItem[] = [
 // =============================================================================
 export const CERTIFICATIONS: CertificationItem[] = [
   {
-    title:  'Registered Electrical Engineer',
+    title: 'Registered Electrical Engineer',
     issuer: 'Professional Regulation Commission',
-    year:   '2026',
-    logo:   'assets/images/prc.png',
+    year: '2026',
+    logo: 'assets/images/prc.png',
     highlight: true,
     // link: 'https://...',  // Uncomment and add URL when available
   },
   {
-    title:  'Lean Six Sigma Yellow Belt',
-    issuer: 'MF Treinamentos',
-    year:   '2025',
-    logo:   'assets/images/mf_treinamentos.png',
-    link:   'https://www.linkedin.com/in/jamescubito/overlay/Certifications/18319228/treasury/?profileId=ACoAAB-vvhABwkL8ZdOhGpXwW1ysdkBLFnUlenc',
-  },
-  {
-    title:  'Electrical Installation & Maintenance NC II',
+    title: 'Electrical Installation & Maintenance NC II',
     issuer: 'TESDA',
-    year:   '2025',
-    logo:   'assets/images/tesda.png',
-    link:   'https://www.tesda.gov.ph/Rwac/Rwac2017',
+    year: '2025',
+    logo: 'assets/images/tesda.png',
+    link: 'https://www.tesda.gov.ph/Rwac/Rwac2017',
     highlight: true,
   },
   {
-    title:  'Photovoltaic System Installation NC II',
+    title: 'Lean Six Sigma Yellow Belt',
+    issuer: 'MF Treinamentos',
+    year: '2025',
+    logo: 'assets/images/mf_treinamentos.png',
+    link: 'https://www.linkedin.com/in/jamescubito/overlay/Certifications/18319228/treasury/?profileId=ACoAAB-vvhABwkL8ZdOhGpXwW1ysdkBLFnUlenc',
+  },
+  {
+    title: 'Photovoltaic System Installation NC II',
     issuer: 'eTESDA',
-    year:   '2025',
-    logo:   'assets/images/tesda.png',
-    link:   'https://drive.google.com/drive/folders/17bun6aQXyKUEdBzQPfa1MNRRDbFNbrkr?usp=sharing',
+    year: '2025',
+    logo: 'assets/images/tesda.png',
+    link: 'https://drive.google.com/drive/folders/17bun6aQXyKUEdBzQPfa1MNRRDbFNbrkr?usp=sharing',
     highlight: true,
   },
   {
-    title:  'Merit Scholar',
+    title: 'Merit Scholar',
     issuer: 'DOST-Science Education Institute',
-    year:   '2020',
-    logo:   'assets/images/dost.png',
-    link:   'https://www.thesummitexpress.com/2020/02/a-g-passers-october-2019-dost-scholarship-exam-result-ay-2020-2021.html',
+    year: '2020',
+    logo: 'assets/images/dost.png',
+    link: 'https://www.thesummitexpress.com/2020/02/a-g-passers-october-2019-dost-scholarship-exam-result-ay-2020-2021.html',
+    highlight: true,
   },
 ];
 
@@ -151,39 +152,32 @@ export const CERTIFICATIONS: CertificationItem[] = [
 // =============================================================================
 export const ACADEMIC_PROJECTS: Project[] = [
   {
-    id:          'thesis',
-    title:       'Project Thesis: Biofuel Production',
-    subtitle:    'Anaerobic Digestion of Chlorophyta Biomass Co-digested with Livestock Manure: Harnessing Biogas for Methane-Derived Electrochemical Energy Conversion in Cabuyao, Laguna',
-    category:    'Research',
+    id: 'thesis',
+    title: 'Project Thesis: Biofuel Production',
+    subtitle: 'Anaerobic Digestion of Chlorophyta Biomass Co-digested with Livestock Manure: Harnessing Biogas for Methane-Derived Electrochemical Energy Conversion in Cabuyao, Laguna',
+    category: 'Research',
     description: 'Small-scale exploratory study on a modified biomass feedstock based on algae and cattle waste for methane gas production as an alternative fuel source for biogas generators.',
     technologies: ['Biogas', 'Biomass Feedstock', 'Renewable Energy', 'Research Methodology'],
   },
   {
-    id:          'salestrackr',
-    title:       'AquaSales: Python-Based Sales Tracking System',
-    category:    'Software',
+    id: 'salestrackr',
+    title: 'AquaSales: Python-Based Sales Tracking System',
+    category: 'Software',
     description: 'Developed a digital tracking system to tabulate daily sales and stock of a water refilling station, increasing daily productivity and operational efficiency.',
     technologies: ['Python', 'Data Management', 'Business Application'],
   },
   {
-    id:          'xl-fault-calc',
-    title:       'Excel-Based Symmetrical Fault Calculator',
-    category:    'Power Systems',
+    id: 'xl-fault-calc',
+    title: 'Excel-Based Symmetrical Fault Calculator',
+    category: 'Power Systems',
     description: 'Developed a fault calculator for three-phase faults based on a configurable number of buses and line parameters using the Z-bus method.',
     technologies: ['MS Excel', 'Power System Analysis', 'Z-bus Method'],
   },
   {
-    id:          'dc-supply',
-    title:       'DC Power Supply',
-    category:    'Power Electronics',
-    description: 'Constructed an adjustable DC power supply from scratch; designed and fabricated a self-etched PCB rectifier as a key component.',
-    technologies: ['PCB Etching', 'Power Electronics', 'Component Assembly'],
-  },
-  {
-    id:          'shs-capstone',
-    title:       'Research Capstone: Statistical Correlational Study',
-    subtitle:    'Statistical Analysis of Psychological Health and GWA of DLSU 118 STEM Students',
-    category:    'Research',
+    id: 'shs-capstone',
+    title: 'Research Capstone: Statistical Correlational Study',
+    subtitle: 'Statistical Analysis of Psychological Health and GWA of DLSU 118 STEM Students',
+    category: 'Research',
     description: 'Conducted a statistical correlational study of GWA and mental health among SHS STEM students; presented at the DLSU SHS 1st Research Congress.',
     technologies: ['Statistical Analysis', 'Data Correlation', 'Academic Research'],
   },
@@ -207,51 +201,33 @@ export const SPECIALIZED_PROJECTS: Project[] = [
 ];
 
 // =============================================================================
-//  ENGINEERING TECH STACK
+//  TECHNICAL SKILLS (Consolidated Tech Stack & Skills)
 // =============================================================================
-export const ENGINEERING_TOOLS: ToolItem[] = [
-  // Power Systems Analysis
-  { name: 'ETAP',                 category: 'Power Systems Analysis' },
-  { name: 'PowerWorld Simulator', category: 'Power Systems Analysis' },
-  { name: 'PSS/E',                category: 'Power Systems Analysis' },
+export const TECHNICAL_SKILLS: SkillItem[] = [
+  // Core Engineering
+  { name: 'Electrical Circuits', category: 'Core Engineering' },
+  { name: 'Electrical Machines', category: 'Core Engineering' },
+  { name: 'Electrical Design & Illumination', category: 'Core Engineering' },
+  { name: 'Power Plant Design', category: 'Core Engineering' },
+  { name: 'Power Systems Analysis', category: 'Core Engineering' },
 
-  // Design & Drafting
-  { name: 'AutoCAD',              category: 'Design & Drafting' },
-  { name: 'DIALux evo',           category: 'Design & Drafting' },
+  // Power Systems & Design Software
+  { name: 'ETAP', category: 'Power Systems & Design Software' },
+  { name: 'PowerWorld Simulator', category: 'Power Systems & Design Software' },
+  { name: 'PSS/E', category: 'Power Systems & Design Software' },
+  { name: 'AutoCAD', category: 'Power Systems & Design Software' },
+  { name: 'DIALux evo', category: 'Power Systems & Design Software' },
 
   // Data, Analytics & Programming
-  { name: 'Python (NumPy · Pandas)', category: 'Data, Analytics & Programming' },
-  { name: 'MATLAB / Simulink',    category: 'Data, Analytics & Programming' },
-  { name: 'MS Excel / Power Query', category: 'Data, Analytics & Programming' },
-  { name: 'Tableau / Power BI',   category: 'Data, Analytics & Programming' },
-  { name: 'Snowflake SQL',        category: 'Data, Analytics & Programming' },
+  { name: 'Python', category: 'Data, Analytics & Programming', details: 'NumPy, Pandas — Working Knowledge' },
+  { name: 'MATLAB / Simulink', category: 'Data, Analytics & Programming' },
+  { name: 'C / C++', category: 'Data, Analytics & Programming', details: 'Basic Knowledge' },
   { name: 'Arduino / Embedded C', category: 'Data, Analytics & Programming' },
-];
-
-// =============================================================================
-//  SKILLS (Core Engineering + Software + Programming)
-// =============================================================================
-export const SKILLS: Skill[] = [
-  // Core
-  { name: 'Electrical Circuits',                category: 'Core' },
-  { name: 'Electrical Machines',                category: 'Core' },
-  { name: 'Electrical Design and Illumination', category: 'Core' },
-  { name: 'Power Plant Design',                 category: 'Core' },
-  { name: 'Power Systems Analysis',             category: 'Core' },
-
-  // Software
-  { name: 'Microsoft Office Suite', category: 'Software', details: 'Excel, Word, PowerPoint, Teams' },
-  { name: 'Google Workspace',       category: 'Software', details: 'Drive, Docs, Sheets, Slides' },
-  { name: 'AutoCAD',                category: 'Software' },
-  { name: 'ETAP',                   category: 'Software' },
-  { name: 'PowerWorld Simulator',   category: 'Software' },
-  { name: 'DIALux evo',             category: 'Software' },
-  { name: 'Tableau / Power BI',     category: 'Software' },
-  { name: 'Snowflake SQL',          category: 'Software' },
-
-  // Programming
-  { name: 'Python',  category: 'Programming', details: 'NumPy, Pandas — Working Knowledge' },
-  { name: 'MATLAB',  category: 'Programming', details: 'Working Knowledge' },
-  { name: 'SQL',     category: 'Programming', details: 'Working Knowledge' },
-  { name: 'C / C++', category: 'Programming', details: 'Basic Knowledge' },
+  { name: 'SQL (Snowflake)', category: 'Data, Analytics & Programming' },
+  { name: 'Tableau / Power BI', category: 'Data, Analytics & Programming' },
+  { name: 'MS Excel / Power Query', category: 'Data, Analytics & Programming' },
+  
+  // General Software
+  { name: 'Microsoft Office Suite', category: 'General Software' },
+  { name: 'Google Workspace', category: 'General Software' },
 ];

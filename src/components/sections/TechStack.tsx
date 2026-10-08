@@ -1,12 +1,12 @@
 import React from 'react';
 import { Cpu } from 'lucide-react';
-import { SectionId, ToolItem } from '../../data/types';
-import { ENGINEERING_TOOLS } from '../../data/constants';
+import { SectionId, SkillItem } from '../../data/types';
+import { TECHNICAL_SKILLS } from '../../data/constants';
 import SectionHeader from '../ui/SectionHeader';
 
 // Group tools by their category
-function groupByCategory(tools: ToolItem[]): Record<string, ToolItem[]> {
-  return tools.reduce<Record<string, ToolItem[]>>((acc, tool) => {
+function groupByCategory(tools: SkillItem[]): Record<string, SkillItem[]> {
+  return tools.reduce<Record<string, SkillItem[]>>((acc, tool) => {
     if (!acc[tool.category]) acc[tool.category] = [];
     acc[tool.category].push(tool);
     return acc;
@@ -14,8 +14,8 @@ function groupByCategory(tools: ToolItem[]): Record<string, ToolItem[]> {
 }
 
 const TechStack: React.FC = () => {
-  const grouped = groupByCategory(ENGINEERING_TOOLS);
-  const categories = Object.keys(grouped) as ToolItem['category'][];
+  const grouped = groupByCategory(TECHNICAL_SKILLS);
+  const categories = Object.keys(grouped);
 
   return (
     <section
@@ -58,7 +58,14 @@ const TechStack: React.FC = () => {
                       className="w-1.5 h-1.5 rounded-full mr-3 shrink-0"
                       style={{ backgroundColor: 'var(--accent)' }}
                     />
-                    {tool.name}
+                    <div className="flex flex-col min-w-0">
+                      <span className="truncate">{tool.name}</span>
+                      {tool.details && (
+                        <span className="text-[11px] font-normal mt-0.5 truncate" style={{ color: 'var(--text-muted)' }}>
+                          {tool.details}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
