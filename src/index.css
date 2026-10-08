@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================================================
+   CSS CUSTOM PROPERTIES — Light & Dark Themes
+   All component colours reference these variables so a single class toggle
+   on <html> switches the entire site.
+   ============================================================================= */
+
+:root {
+  /* Backgrounds */
+  --bg-page:        #ffffff;
+  --bg-surface:     #f8fafc;  /* alternate section bg */
+  --bg-card:        #ffffff;
+  --bg-dark-section:#0f172a;  /* Contact section */
+
+  /* Text */
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
+
+  /* Borders */
+  --border:         #e2e8f0;
+  --border-strong:  #cbd5e1;
+
+  /* Accent (blue) */
+  --accent:         #2563eb;
+  --accent-hover:   #1d4ed8;
+  --accent-light:   #dbeafe;
+  --accent-text:    #1d4ed8;
+
+  /* Nav */
+  --nav-bg:         rgba(255, 255, 255, 0.97);
+  --nav-border:     #e2e8f0;
+
+  /* Timeline */
+  --timeline-line:  #e2e8f0;
+
+  /* Dark section (Contact) */
+  --dark-text:      #f1f5f9;
+  --dark-text-muted:#94a3b8;
+  --dark-border:    #334155;
+
+  /* Gold */
+  --gold:           #d97706; /* Tailwind amber-600 */
+}
+
+html.dark {
+  /* Backgrounds */
+  --bg-page:        #121212;
+  --bg-surface:     #1e1e1e;
+  --bg-card:        #1e1e1e;
+  --bg-dark-section:#0a0a0a;
+
+  /* Text */
+  --text-primary:   #f1f5f9;
+  --text-secondary: #a1a1aa;
+  --text-muted:     #71717a;
+
+  /* Borders */
+  --border:         #333333;
+  --border-strong:  #444444;
+
+  /* Accent (slightly lighter for dark legibility) */
+  --accent:         #3b82f6;
+  --accent-hover:   #60a5fa;
+  --accent-light:   rgba(59, 130, 246, 0.15);
+  --accent-text:    #60a5fa;
+
+  /* Nav */
+  --nav-bg:         rgba(18, 18, 18, 0.97);
+  --nav-border:     #333333;
+
+  /* Timeline */
+  --timeline-line:  #333333;
+
+  /* Dark section (even darker in dark mode) */
+  --dark-text:      #e2e8f0;
+  --dark-text-muted:#a1a1aa;
+  --dark-border:    #1e1e1e;
+
+  /* Gold */
+  --gold:           #fbbf24; /* Tailwind amber-400 */
+}
+
+/* =============================================================================
+   BASE STYLES
+   ============================================================================= */
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  /* Smooth color transition when toggling theme */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =============================================================================
+   UTILITY CLASSES — Semantic colour aliases
+   Use these in components instead of raw Tailwind colours so both themes
+   are automatically covered.
+   ============================================================================= */
+
+@layer components {
+
+  /* --- Page & Surface --- */
+  .bg-page    { background-color: var(--bg-page); }
+  .bg-surface { background-color: var(--bg-surface); }
+  .bg-card    { background-color: var(--bg-card); }
+
+  /* --- Text --- */
+  .text-primary-c   { color: var(--text-primary); }
+  .text-secondary-c { color: var(--text-secondary); }
+  .text-muted-c     { color: var(--text-muted); }
+  .text-accent-c    { color: var(--accent-text); }
+
+  /* --- Borders --- */
+  .border-theme       { border-color: var(--border); }
+  .border-theme-strong{ border-color: var(--border-strong); }
+
+  /* --- Accent --- */
+  .bg-accent-light { background-color: var(--accent-light); }
+  .text-accent     { color: var(--accent); }
+  .border-accent   { border-color: var(--accent); }
+
+  /* --- Pill / Badge --- */
+  .pill {
+    @apply inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-full;
+    background-color: var(--bg-surface);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+
+  /* --- Section wrapper --- */
+  .section-container {
+    @apply container mx-auto px-6 md:px-12 max-w-5xl;
+  }
+
+  /* --- Section divider --- */
+  .section-divider {
+    border-top: 1px solid var(--border);
+  }
+
+  /* --- Card --- */
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-lg;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card:hover {
+    border-color: var(--border-strong);
+  }
+
+  /* --- Timeline vertical line --- */
+  .timeline-line {
+    border-left: 2px solid var(--timeline-line);
+  }
+
+  /* --- Nav background --- */
+  .nav-bg {
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+  }
+}
+
+/* =============================================================================
+   ANIMATIONS — subtle, professional
+   ============================================================================= */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+/* Portrait image ring — respects theme */
+.portrait-ring {
+  border: 3px solid var(--border-strong);
+  transition: border-color 0.2s ease;
+}
+
+html.dark .portrait-ring {
+  border-color: var(--accent);
+}
