@@ -212,15 +212,15 @@ export const TECHNICAL_SKILLS: SkillItem[] = [
   { name: 'DIALux evo', category: 'Design & CAD Software' },
 
   // Data Analytics & Programming
-  { name: 'Python', category: 'Data Analytics & Programming', details: 'NumPy, Pandas — Working Knowledge' },
+  { name: 'Python', category: 'Data Analytics & Programming' },
   { name: 'MATLAB / Simulink', category: 'Data Analytics & Programming' },
-  { name: 'C / C++', category: 'Data Analytics & Programming', details: 'Basic Knowledge' },
-  { name: 'Arduino / Embedded C', category: 'Data Analytics & Programming' },
+  { name: 'C / C++', category: 'Data Analytics & Programming' },
   { name: 'SQL (Snowflake)', category: 'Data Analytics & Programming' },
   { name: 'Tableau / Power BI', category: 'Data Analytics & Programming' },
   { name: 'MS Excel / Power Query', category: 'Data Analytics & Programming' },
   
   // General Software
-  { name: 'Microsoft Office Suite', category: 'General Software' },
-  { name: 'Google Workspace', category: 'General Software' },
+  { name: 'Microsoft Office Suite', category: 'General Software', details: 'Word, Excel, Powerpoint ' },
+  { name: 'Google Workspace', category: 'General Software', details: 'Docs, Sheets, Slide ' },
+  { name: 'Canva', category: 'Design & Publishing' },
 ];
