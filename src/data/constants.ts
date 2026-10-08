@@ -42,7 +42,7 @@ export const EDUCATION: EducationItem[] = [
     school: 'Pamantasan ng Lungsod ng Maynila',
     degree: 'Bachelor of Science in Electrical Engineering',
     location: 'Intramuros, Manila',
-    year: '2020 – 2026',
+    year: 'Aug 2026',
     logo: 'assets/images/plm.png',
     highlights: [
       'Scholar: DOST-SEI Merit 2020',
@@ -54,7 +54,7 @@ export const EDUCATION: EducationItem[] = [
     school: 'De La Salle University – Manila',
     degree: 'Senior High School, STEM',
     location: 'Malate, Manila',
-    year: '2018 – 2020',
+    year: 'May 2020',
     logo: 'assets/images/dlsu.png',
     highlights: [
       'Member: DLSU SHS Robotics and Engineering Club',
@@ -134,7 +134,6 @@ export const CERTIFICATIONS: CertificationItem[] = [
     year: '2025',
     logo: 'assets/images/tesda.png',
     link: 'https://drive.google.com/drive/folders/17bun6aQXyKUEdBzQPfa1MNRRDbFNbrkr?usp=sharing',
-    highlight: true,
   },
   {
     title: 'Merit Scholar',
@@ -203,28 +202,23 @@ export const SPECIALIZED_PROJECTS: Project[] = [
 //  TECHNICAL SKILLS (Consolidated Tech Stack & Skills)
 // =============================================================================
 export const TECHNICAL_SKILLS: SkillItem[] = [
-  // Core Engineering
-  { name: 'Electrical Circuits', category: 'Core Engineering' },
-  { name: 'Electrical Machines', category: 'Core Engineering' },
-  { name: 'Electrical Design & Illumination', category: 'Core Engineering' },
-  { name: 'Power Plant Design', category: 'Core Engineering' },
-  { name: 'Power Systems Analysis', category: 'Core Engineering' },
+  // Power Systems Software
+  { name: 'ETAP', category: 'Power Systems Software' },
+  { name: 'PowerWorld Simulator', category: 'Power Systems Software' },
+  { name: 'PSS/E', category: 'Power Systems Software' },
 
-  // Power Systems & Design Software
-  { name: 'ETAP', category: 'Power Systems & Design Software' },
-  { name: 'PowerWorld Simulator', category: 'Power Systems & Design Software' },
-  { name: 'PSS/E', category: 'Power Systems & Design Software' },
-  { name: 'AutoCAD', category: 'Power Systems & Design Software' },
-  { name: 'DIALux evo', category: 'Power Systems & Design Software' },
+  // Design & CAD Software
+  { name: 'AutoCAD', category: 'Design & CAD Software' },
+  { name: 'DIALux evo', category: 'Design & CAD Software' },
 
-  // Data, Analytics & Programming
-  { name: 'Python', category: 'Data, Analytics & Programming', details: 'NumPy, Pandas — Working Knowledge' },
-  { name: 'MATLAB / Simulink', category: 'Data, Analytics & Programming' },
-  { name: 'C / C++', category: 'Data, Analytics & Programming', details: 'Basic Knowledge' },
-  { name: 'Arduino / Embedded C', category: 'Data, Analytics & Programming' },
-  { name: 'SQL (Snowflake)', category: 'Data, Analytics & Programming' },
-  { name: 'Tableau / Power BI', category: 'Data, Analytics & Programming' },
-  { name: 'MS Excel / Power Query', category: 'Data, Analytics & Programming' },
+  // Data Analytics & Programming
+  { name: 'Python', category: 'Data Analytics & Programming', details: 'NumPy, Pandas — Working Knowledge' },
+  { name: 'MATLAB / Simulink', category: 'Data Analytics & Programming' },
+  { name: 'C / C++', category: 'Data Analytics & Programming', details: 'Basic Knowledge' },
+  { name: 'Arduino / Embedded C', category: 'Data Analytics & Programming' },
+  { name: 'SQL (Snowflake)', category: 'Data Analytics & Programming' },
+  { name: 'Tableau / Power BI', category: 'Data Analytics & Programming' },
+  { name: 'MS Excel / Power Query', category: 'Data Analytics & Programming' },
   
   // General Software
   { name: 'Microsoft Office Suite', category: 'General Software' },
