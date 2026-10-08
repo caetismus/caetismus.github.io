@@ -1,7 +1,6 @@
 import {
   Project,
-  Skill,
-  ToolItem,
+  SkillItem,
   EducationItem,
   ExperienceItem,
   CertificationItem,
