@@ -58,8 +58,6 @@ export interface CertificationItem {
 
 export interface ContactInfo {
   email: string;
-  /** Path relative to public/ e.g. "assets/images/viber_qr.png" */
-  viberQrImage: string;
   linkedinUrl: string;
   linkedinDisplay: string;
   githubUrl: string;
