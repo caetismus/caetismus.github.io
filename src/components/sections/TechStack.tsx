@@ -20,8 +20,8 @@ const TechStack: React.FC = () => {
   return (
     <section
       id={SectionId.TECHSTACK}
-      className="py-16"
-      style={{ backgroundColor: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}
+      className="py-12"
+      style={{ backgroundColor: 'var(--bg-page)', borderTop: '1px solid var(--border)' }}
     >
       <div className="section-container">
         <SectionHeader
@@ -30,42 +30,56 @@ const TechStack: React.FC = () => {
           subtitle="Simulation, design, and analysis tools used in power systems and electrical engineering."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Compact, responsive grouped rows layout */}
+        <div
+          className="rounded-xl overflow-hidden divide-y"
+          style={{
+            border: '1px solid var(--border)',
+            backgroundColor: 'var(--bg-card)',
+            borderColor: 'var(--border)',
+          }}
+        >
           {categories.map(category => (
-            <div key={category}>
-              {/* Category heading */}
-              <h3
-                className="text-xs font-bold uppercase tracking-widest mb-4"
-                style={{ color: 'var(--gold)' }}
-              >
-                {category}
-              </h3>
+            <div
+              key={category}
+              className="p-4 sm:p-5 flex flex-col md:flex-row md:items-center gap-3 md:gap-6 transition-colors"
+              style={{ borderColor: 'var(--border)' }}
+            >
+              {/* Category title column — centered vertically, left-aligned */}
+              <div className="md:w-60 shrink-0 text-left">
+                <h3
+                  className="text-xs font-bold uppercase tracking-wider"
+                  style={{ color: 'var(--gold)' }}
+                >
+                  {category}
+                </h3>
+              </div>
 
-              {/* Tool badges */}
-              <div className="flex flex-col gap-2">
+              {/* Skills chips flex-wrap */}
+              <div className="flex flex-wrap gap-2 sm:gap-2.5 flex-1 min-w-0">
                 {grouped[category].map(tool => (
                   <div
                     key={tool.name}
-                    className="flex items-center px-4 py-3 rounded-md text-sm font-medium transition-colors"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-xs sm:text-sm font-medium transition-all"
                     style={{
-                      backgroundColor: 'var(--bg-card)',
+                      backgroundColor: 'var(--bg-surface)',
                       border: '1px solid var(--border)',
                       color: 'var(--text-primary)',
                     }}
                   >
-                    {/* Accent dot marker */}
                     <span
-                      className="w-1.5 h-1.5 rounded-full mr-3 shrink-0"
+                      className="w-1.5 h-1.5 rounded-full shrink-0"
                       style={{ backgroundColor: 'var(--accent)' }}
                     />
-                    <div className="flex flex-col min-w-0">
-                      <span className="truncate">{tool.name}</span>
-                      {tool.details && (
-                        <span className="text-[11px] font-normal mt-0.5 truncate" style={{ color: 'var(--text-muted)' }}>
-                          {tool.details}
-                        </span>
-                      )}
-                    </div>
+                    <span>{tool.name}</span>
+                    {tool.details && (
+                      <span
+                        className="text-[11px] font-normal"
+                        style={{ color: 'var(--text-muted)' }}
+                      >
+                        · {tool.details}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>

@@ -145,7 +145,7 @@ body {
 
   /* --- Section wrapper --- */
   .section-container {
-    @apply container mx-auto px-6 md:px-12 max-w-5xl;
+    @apply container mx-auto px-6 md:px-12 max-w-6xl;
   }
 
   /* --- Section divider --- */
@@ -190,12 +190,8 @@ body {
   animation: fadeUp 0.5s ease forwards;
 }
 
-/* Portrait image ring — respects theme */
+/* Portrait image ring — neutral in both light and dark themes */
 .portrait-ring {
   border: 3px solid var(--border-strong);
   transition: border-color 0.2s ease;
-}
-
-html.dark .portrait-ring {
-  border-color: var(--accent);
 }

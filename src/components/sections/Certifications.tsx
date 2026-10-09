@@ -1,15 +1,17 @@
 import React from 'react';
 import { Award, ExternalLink, Star } from 'lucide-react';
+import { SectionId } from '../../data/types';
 import { CERTIFICATIONS } from '../../data/constants';
 import SectionHeader from '../ui/SectionHeader';
 
 const Certifications: React.FC = () => (
   <section
-    className="py-16"
-    style={{ backgroundColor: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}
+    id={SectionId.CERTIFICATIONS}
+    className="py-12"
+    style={{ backgroundColor: 'var(--bg-page)', borderTop: '1px solid var(--border)' }}
   >
     <div className="section-container">
-      <SectionHeader icon={<Award size={22} />} title="Certifications & Awards" />
+      <SectionHeader icon={<Award size={22} />} title="Licenses & Certifications" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {CERTIFICATIONS.map((cert, index) => {

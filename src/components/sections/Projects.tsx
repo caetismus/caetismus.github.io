@@ -1,15 +1,15 @@
 import React from 'react';
 import { FolderOpen } from 'lucide-react';
 import { SectionId, Project } from '../../data/types';
-import { ACADEMIC_PROJECTS } from '../../data/constants';
+import { ACADEMIC_PROJECTS, SPECIALIZED_PROJECTS } from '../../data/constants';
 import SectionHeader from '../ui/SectionHeader';
 
 // ---------------------------------------------------------------------------
-// ProjectCard — subdued, minimal visual weight
+// ProjectCard — subdued, minimal visual weight with upcoming blur support
 // ---------------------------------------------------------------------------
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div
-    className="group py-5 pl-5 rounded-r-md transition-all duration-200"
+    className="group py-5 pl-5 pr-4 rounded-r-md transition-all duration-200"
     style={{
       borderLeft: '3px solid var(--border)',
       backgroundColor: 'transparent',
@@ -23,45 +23,71 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
       (e.currentTarget as HTMLDivElement).style.backgroundColor = 'transparent';
     }}
   >
-    {/* Title row */}
-    <div className="flex flex-wrap items-baseline gap-3 mb-1">
-      <h3
-        className="text-base font-semibold leading-snug transition-colors"
-        style={{ color: 'var(--text-primary)' }}
-      >
-        {project.title}
-      </h3>
-      <span
-        className="text-xs font-semibold uppercase tracking-wider"
-        style={{ color: 'var(--text-muted)' }}
-      >
-        {project.category}
-      </span>
-    </div>
-
-    {/* Optional subtitle */}
-    {project.subtitle && (
-      <p
-        className="text-sm italic mb-2 leading-snug"
-        style={{ color: 'var(--text-secondary)' }}
-      >
-        {project.subtitle}
-      </p>
+    {/* Upcoming / In Development indicator */}
+    {project.isUpcoming && (
+      <div className="mb-3">
+        <span
+          className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full"
+          style={{
+            backgroundColor: 'rgba(217, 119, 6, 0.12)',
+            color: 'var(--gold)',
+            border: '1px solid rgba(217, 119, 6, 0.25)',
+          }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+          In Development
+        </span>
+      </div>
     )}
 
-    {/* Description */}
-    <p
-      className="text-sm leading-relaxed mb-3"
-      style={{ color: 'var(--text-secondary)' }}
+    {/* Project details — blurred when isUpcoming is true in constants.ts */}
+    <div
+      className={
+        project.isUpcoming
+          ? 'filter blur-[4px] select-none opacity-60 pointer-events-none'
+          : ''
+      }
     >
-      {project.description}
-    </p>
+      {/* Title row */}
+      <div className="flex flex-wrap items-baseline gap-3 mb-1">
+        <h3
+          className="text-base font-semibold leading-snug transition-colors"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          {project.title}
+        </h3>
+        <span
+          className="text-xs font-semibold uppercase tracking-wider"
+          style={{ color: 'var(--text-muted)' }}
+        >
+          {project.category}
+        </span>
+      </div>
 
-    {/* Technology pills */}
-    <div className="flex flex-wrap gap-2">
-      {project.technologies.map(tech => (
-        <span key={tech} className="pill">{tech}</span>
-      ))}
+      {/* Optional subtitle */}
+      {project.subtitle && (
+        <p
+          className="text-sm italic mb-2 leading-snug"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          {project.subtitle}
+        </p>
+      )}
+
+      {/* Description */}
+      <p
+        className="text-sm leading-relaxed mb-3"
+        style={{ color: 'var(--text-secondary)' }}
+      >
+        {project.description}
+      </p>
+
+      {/* Technology pills */}
+      <div className="flex flex-wrap gap-2">
+        {project.technologies.map(tech => (
+          <span key={tech} className="pill">{tech}</span>
+        ))}
+      </div>
     </div>
   </div>
 );
@@ -72,45 +98,48 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
 const Projects: React.FC = () => (
   <section
     id={SectionId.PROJECTS}
-    className="py-16"
+    className="py-12"
     style={{ backgroundColor: 'var(--bg-page)', borderTop: '1px solid var(--border)' }}
   >
     <div className="section-container">
       <SectionHeader
         icon={<FolderOpen size={22} />}
-        title="Academic Projects"
-        subtitle="Selected coursework, research, and academic engineering projects."
+        title="Projects"
+        subtitle="Specialized power engineering initiatives, coursework, and technical applications."
         size="lg"
       />
 
-      <div className="flex flex-col gap-6">
-        {ACADEMIC_PROJECTS.map(project => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
+      {/* Personal Projects (Featured / Under Development) */}
+      {SPECIALIZED_PROJECTS.length > 0 && (
+        <div className="mb-10">
+          <h3
+            className="text-xs font-bold uppercase tracking-widest mb-4"
+            style={{ color: 'var(--gold)' }}
+          >
+            Personal Projects
+          </h3>
+          <div className="flex flex-col gap-6">
+            {SPECIALIZED_PROJECTS.map(project => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      )}
 
-      {/*
-        Specialized Subjects / Projects
-        ─────────────────────────────────
-        These are intentionally hidden until the project output is ready to showcase.
-        To enable:
-          1. Import SPECIALIZED_PROJECTS from '../../data/constants'
-          2. Uncomment the block below
-      */}
-      {/*
-      <div className="mt-12">
-        <SectionHeader
-          icon={<FolderOpen size={20} />}
-          title="Specialized Subjects"
-          size="sm"
-        />
+      {/* Academic & Research Projects */}
+      <div>
+        <h3
+          className="text-xs font-bold uppercase tracking-widest mb-4"
+          style={{ color: 'var(--text-muted)' }}
+        >
+          Academic & Research Projects
+        </h3>
         <div className="flex flex-col gap-6">
-          {SPECIALIZED_PROJECTS.map(project => (
+          {ACADEMIC_PROJECTS.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
-      */}
     </div>
   </section>
 );

@@ -3,24 +3,22 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Experience from './components/sections/Experience';
-import Education from './components/sections/Education';
-import Certifications from './components/sections/Certifications';
 import Projects from './components/sections/Projects';
 import TechStack from './components/sections/TechStack';
-import Contact from './components/sections/Contact';
+import Education from './components/sections/Education';
+import Certifications from './components/sections/Certifications';
 
 /**
  * Root application component.
  *
- * Section order:
+ * Section order (Career Priority):
  *   Header (fixed)
- *   ↓ Hero           — name, role, portrait
- *   ↓ Experience      — internship timeline     [nav: About]
- *   ↓ Education       — school cards
- *   ↓ Certifications  — awards grid
- *   ↓ Projects        — academic projects       [nav: Projects]
- *   ↓ TechStack       — engineering tools       [nav: Tech Stack]
- *   ↓ Contact         — dark section            [nav: Contact]
+ *   ↓ Hero           — Name, role, portrait, bio, contact details row
+ *   ↓ Experience     — Professional experience / internship timeline
+ *   ↓ Projects       — Academic & technical engineering projects
+ *   ↓ TechStack      — Technical skills & engineering software tools
+ *   ↓ Education      — Degree & academic background
+ *   ↓ Certifications — PRC licenses & professional credentials
  *   Footer
  */
 const App: React.FC = () => (
@@ -29,11 +27,10 @@ const App: React.FC = () => (
     <main>
       <Hero />
       <Experience />
-      <Education />
-      <Certifications />
       <Projects />
       <TechStack />
-      <Contact />
+      <Education />
+      <Certifications />
     </main>
     <Footer />
   </div>

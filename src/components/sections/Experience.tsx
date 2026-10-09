@@ -7,12 +7,12 @@ import RichText from '../ui/RichText';
 
 const Experience: React.FC = () => (
   <section
-    id={SectionId.ABOUT}
-    className="py-16"
-    style={{ backgroundColor: 'var(--bg-surface)', borderTop: '1px solid var(--border)' }}
+    id={SectionId.EXPERIENCE}
+    className="py-12"
+    style={{ backgroundColor: 'var(--bg-page)', borderTop: '1px solid var(--border)' }}
   >
     <div className="section-container">
-      <SectionHeader icon={<Briefcase size={22} />} title="Internship Experience" />
+      <SectionHeader icon={<Briefcase size={22} />} title="Professional Experience" />
 
       {/* Timeline */}
       <div className="relative ml-6 timeline-line space-y-10">
@@ -52,7 +52,7 @@ const Experience: React.FC = () => (
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-1">
                 <h3
                   className="text-base font-bold"
-                  style={{ color: isLatest ? 'var(--gold)' : 'var(--text-primary)' }}
+                  style={{ color: isLatest ? 'var(--accent-text)' : 'var(--text-primary)' }}
                 >
                   {exp.role}
                 </h3>

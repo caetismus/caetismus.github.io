@@ -11,6 +11,8 @@ export interface Project {
   category: string;
   description: string;
   technologies: string[];
+  /** When true, renders with an upcoming badge and toggle-able preview blur */
+  isUpcoming?: boolean;
 }
 
 export interface SkillItem {
@@ -60,12 +62,15 @@ export interface ContactInfo {
   viberQrImage: string;
   linkedinUrl: string;
   linkedinDisplay: string;
+  githubUrl: string;
+  githubDisplay: string;
 }
 
 export enum SectionId {
-  HERO    = 'home',
-  ABOUT   = 'about',
-  PROJECTS = 'projects',
-  TECHSTACK = 'tech-stack',
-  CONTACT = 'contact',
+  HERO           = 'home',
+  EXPERIENCE     = 'experience',
+  PROJECTS       = 'projects',
+  TECHSTACK      = 'skills',
+  EDUCATION      = 'education',
+  CERTIFICATIONS = 'certifications',
 }

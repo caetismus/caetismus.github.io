@@ -1,11 +1,13 @@
 import React from 'react';
 import { GraduationCap } from 'lucide-react';
+import { SectionId } from '../../data/types';
 import { EDUCATION } from '../../data/constants';
 import SectionHeader from '../ui/SectionHeader';
 
 const Education: React.FC = () => (
   <section
-    className="py-16"
+    id={SectionId.EDUCATION}
+    className="py-12"
     style={{ backgroundColor: 'var(--bg-page)', borderTop: '1px solid var(--border)' }}
   >
     <div className="section-container">
@@ -37,18 +39,24 @@ const Education: React.FC = () => (
 
             {/* Content */}
             <div className="flex-grow">
-              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 mb-1">
-                <div>
+              <div className="mb-1">
+                {/* School Name & Location/Year aligned */}
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="text-base font-bold" style={{ color: 'var(--text-primary)' }}>
                     {edu.school}
                   </h3>
-                  <p className="text-sm font-medium mt-0.5" style={{ color: 'var(--gold)' }}>
-                    {edu.degree}
-                  </p>
+                  <span className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--text-muted)' }}>
+                    {edu.year}
+                  </span>
                 </div>
-                <span className="text-xs whitespace-nowrap mt-1 sm:mt-0" style={{ color: 'var(--text-muted)' }}>
-                  {edu.location} · {edu.year}
-                </span>
+                <p
+                  className="text-sm font-medium mt-0.5"
+                  style={{
+                    color: index === 0 ? 'var(--gold)' : 'var(--text-secondary)',
+                  }}
+                >
+                  {edu.degree}
+                </p>
               </div>
 
               {edu.highlights.length > 0 && (

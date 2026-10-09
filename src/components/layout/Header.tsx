@@ -5,11 +5,10 @@ import { useTheme } from '../../hooks/useTheme';
 import { RESUME_PATH } from '../../data/constants';
 
 const NAV_LINKS = [
-  { id: SectionId.HERO,      label: 'Home' },
-  { id: SectionId.ABOUT,     label: 'About' },
-  { id: SectionId.PROJECTS,  label: 'Projects' },
-  { id: SectionId.TECHSTACK, label: 'Technical Skills' },
-  { id: SectionId.CONTACT,   label: 'Contact' },
+  { id: SectionId.EXPERIENCE, label: 'Experience' },
+  { id: SectionId.PROJECTS,   label: 'Projects' },
+  { id: SectionId.TECHSTACK,  label: 'Skills' },
+  { id: SectionId.EDUCATION,  label: 'Education' },
 ];
 
 const Header: React.FC = () => {
@@ -35,17 +34,17 @@ const Header: React.FC = () => {
       }`}
       style={{ backgroundColor: 'var(--nav-bg)', borderBottom: scrolled ? '1px solid var(--nav-border)' : 'none' }}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between max-w-5xl">
+      <div className="container mx-auto px-6 flex items-center justify-between max-w-6xl">
 
-        {/* ── Logo / Monogram ── */}
+        {/* ── Logo ── */}
         <button
           id="nav-logo"
           onClick={() => scrollToSection(SectionId.HERO)}
-          className="text-sm font-bold tracking-widest uppercase transition-colors"
+          className="text-sm font-bold tracking-wider transition-colors hover:opacity-80"
           style={{ color: 'var(--text-primary)' }}
           aria-label="Go to top"
         >
-          JC
+          James Cubito
         </button>
 
         {/* ── Desktop Nav Links (centred) ── */}

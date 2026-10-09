@@ -11,9 +11,9 @@ import {
 //  PERSONAL IDENTITY
 // =============================================================================
 export const ENGINEER_NAME = 'James Cubito';
-export const ENGINEER_ROLE = 'Graduate Registered Electrical Engineer';
+export const ENGINEER_ROLE = 'Registered Electrical Engineer';
 export const HERO_DESCRIPTION =
-  'Graduate Electrical Engineer from Pamantasan ng Lungsod ng Maynila with a focus on power systems, controls, energy, and electrical infrastructure. Interested in gaining hands-on experience, developing technical expertise, and contributing to sustainable energy solutions. Open to opportunities for learning, collaboration, and professional growth.';
+  'Graduate Electrical Engineer from Pamantasan ng Lungsod ng Maynila with a focus on power systems, protection & controls, energy, and electrical infrastructure. Interested in gaining hands-on experience, developing technical expertise, and contributing to sustainable energy solutions. Open to opportunities for learning, collaboration, and professional growth.';
 
 // Portrait image path (place file at public/assets/images/portrait.jpg)
 // If the file is missing, the Hero component will show an initials placeholder.
@@ -21,14 +21,14 @@ export const PORTRAIT_IMAGE = 'assets/images/portrait.jpg';
 
 // =============================================================================
 //  CONTACT INFORMATION
-//  - Upload viber_qr.png → public/assets/images/
 //  - Upload resume.pdf   → public/assets/documents/
 // =============================================================================
 export const CONTACT_INFO: ContactInfo = {
   email: 'jamescubito@gmail.com',
-  viberQrImage: 'assets/images/viber_qr.png',
   linkedinUrl: 'https://linkedin.com/in/jamescubito',
   linkedinDisplay: 'in/jamescubito',
+  githubUrl: 'https://github.com/caetismus',
+  githubDisplay: 'caetismus',
 };
 
 export const RESUME_PATH = 'assets/documents/resume.pdf';
@@ -71,7 +71,7 @@ export const EDUCATION: EducationItem[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     role: 'Intern, Plant Performance and Asset Management',
-    company: 'ACEN',
+    company: 'ACEN Corporation',
     location: 'Makati',
     duration: 'July – Oct 2025',
     type: 'Internship',
@@ -135,14 +135,13 @@ export const CERTIFICATIONS: CertificationItem[] = [
     logo: 'assets/images/tesda.png',
     link: 'https://drive.google.com/drive/folders/17bun6aQXyKUEdBzQPfa1MNRRDbFNbrkr?usp=sharing',
   },
-  {
-    title: 'Merit Scholar',
-    issuer: 'DOST-Science Education Institute',
-    year: '2020',
-    logo: 'assets/images/dost.png',
-    link: 'https://www.thesummitexpress.com/2020/02/a-g-passers-october-2019-dost-scholarship-exam-result-ay-2020-2021.html',
-    highlight: true,
-  },
+//  {
+//    title: 'Merit Scholar',
+//    issuer: 'DOST-Science Education Institute',
+//    year: '2020',
+//    logo: 'assets/images/dost.png',
+//    link: 'https://www.thesummitexpress.com/2020/02/a-g-passers-october-2019-dost-scholarship-exam-result-ay-2020-2021.html',
+//  },
 ];
 
 // =============================================================================
@@ -182,20 +181,29 @@ export const ACADEMIC_PROJECTS: Project[] = [
 ];
 
 // =============================================================================
-//  SPECIALIZED SUBJECTS / PROJECTS
-//  These are kept in data but intentionally not rendered until ready.
-//  To show them, import and use in Projects.tsx.
+//  PERSONAL PROJECTS
+//  Engineering projects currently in active development.
+//  Toggle 'isUpcoming: false' to remove the preview blur once completed.
 // =============================================================================
 export const SPECIALIZED_PROJECTS: Project[] = [
-  // --- Filler format for when adding new info ---
-  // {
-  //   id:          'unique-project-id',
-  //   title:       'Project Title',
-  //   subtitle:    'Optional longer subtitle or context',
-  //   category:    'Category (e.g., Power Systems)',
-  //   description: 'Brief description of the project goals, methods, and results.',
-  //   technologies: ['Tool 1', 'Skill 1', 'Concept 1'],
-  // },
+  {
+    id:          'specialized-project-1',
+    title:       '[Upcoming Specialized Project 1]',
+    subtitle:    '[Optional Subtitle / Focus Area]',
+    category:    '[Specialization / Field]',
+    description: '[In Development] Fill this section with your project description, methodology, and technical outcomes once ready to showcase.',
+    technologies: ['[Tool 1]', '[Tool 2]', '[Tool 3]'],
+    isUpcoming:   true,
+  },
+  {
+    id:          'specialized-project-2',
+    title:       '[Upcoming Specialized Project 2]',
+    subtitle:    '[Optional Subtitle / Focus Area]',
+    category:    '[Specialization / Field]',
+    description: '[In Development] Fill this section with your project description, methodology, and technical outcomes once ready to showcase.',
+    technologies: ['[Tool 1]', '[Tool 2]', '[Tool 3]'],
+    isUpcoming:   true,
+  },
 ];
 
 // =============================================================================
@@ -203,24 +211,29 @@ export const SPECIALIZED_PROJECTS: Project[] = [
 // =============================================================================
 export const TECHNICAL_SKILLS: SkillItem[] = [
   // Power Systems Software
-  { name: 'ETAP', category: 'Power Systems Software' },
-  { name: 'PowerWorld Simulator', category: 'Power Systems Software' },
-  { name: 'PSS/E', category: 'Power Systems Software' },
+  { name: 'Pandapower', category: 'Power Systems Analysis' },
+  { name: 'ETAP', category: 'Power Systems Analysis' },
+  { name: 'PSS/E', category: 'Power Systems Analysis' },
+  { name: 'PSCAD', category: 'Power Systems Analysis' },
+  { name: 'PowerWorld', category: 'Power Systems Analysis' },
 
   // Design & CAD Software
-  { name: 'AutoCAD', category: 'Design & CAD Software' },
-  { name: 'DIALux evo', category: 'Design & CAD Software' },
+  { name: 'AutoCAD', category: 'Engineering Design & CAD' },
+  { name: 'EPLAN', category: 'Engineering Design & CAD' },
+  { name: 'Revit', category: 'Engineering Design & CAD' },
+  { name: 'DIALux evo', category: 'Engineering Design & CAD' },
+  { name: 'PVSyst', category: 'Engineering Design & CAD' },
 
   // Data Analytics & Programming
   { name: 'Python', category: 'Data Analytics & Programming' },
   { name: 'MATLAB / Simulink', category: 'Data Analytics & Programming' },
-  { name: 'C / C++', category: 'Data Analytics & Programming' },
+  { name: 'C', category: 'Data Analytics & Programming' },
   { name: 'SQL (Snowflake)', category: 'Data Analytics & Programming' },
   { name: 'Tableau / Power BI', category: 'Data Analytics & Programming' },
-  { name: 'MS Excel / Power Query', category: 'Data Analytics & Programming' },
+  { name: 'MS Excel', category: 'Data Analytics & Programming' },
   
   // General Software
   { name: 'Microsoft Office Suite', category: 'General Software', details: 'Word, Excel, Powerpoint ' },
-  { name: 'Google Workspace', category: 'General Software', details: 'Docs, Sheets, Slide ' },
-  { name: 'Canva', category: 'Design & Publishing' },
+  { name: 'Google Workspace', category: 'General Software', details: 'Docs, Sheets, Slide, Drive' },
+  { name: 'Canva', category: 'General Software' },
 ];
